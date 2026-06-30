@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ASISTE CONTRAINCENDIOS | Protección Industrial de Élite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<header id="top-bar" class="main-header">
+    <nav class="nav-container">
+        <a href="#" class="logo-link">
+            <img alt="ASISTE CONTRAINCENDIOS" id="header-logo" class="logo-img" src="assets/images/logo.png"/>
+        </a>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined menu-icon">menu</span>
+        </button>
+    </nav>
+</header>
+
+<!-- Lateral Navigation Drawer Wrapper -->
+<div id="nav-drawer" class="drawer-wrapper hidden">
+    <div id="nav-drawer-overlay" class="drawer-overlay" onclick="toggleMenu()"></div>
+    <div id="nav-drawer-panel" class="drawer-panel hidden-panel">
+        <button class="close-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <div class="drawer-content">
+            <div class="drawer-nav-section">
+                <h2 class="drawer-title">Navegación</h2>
+                <nav class="drawer-nav">
+                    <a href="#" class="drawer-link">Inicio</a>
+                    <a href="conocenos.html" class="drawer-link" onclick="toggleMenu()">Sobre nosotros</a>
+                    <a href="#servicios" class="drawer-link" onclick="toggleMenu()">Servicios</a>
+                    <a href="#procedimiento" class="drawer-link" onclick="toggleMenu()">Procedimiento</a>
+                    <a href="#clientes" class="drawer-link" onclick="toggleMenu()">Clientes</a>
+                    <a href="#horario-mapa" class="drawer-link" onclick="toggleMenu()">Ubicación</a>
+                </nav>
+            </div>
+
+            <div class="drawer-footer">
+                <a href="tel:+34900000000" class="emergency-phone">900 000 000</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-background">
+        <div class="overlay-gradient-top"></div>
+        <div class="overlay-gradient-r"></div>
+        <div class="overlay-gradient-t"></div>
+        <div class="overlay-radial"></div>
+        <img alt="ASISTE CONTRAINCENDIOS - Protección Contra Incendios en Las Palmas" class="hero-img" src="assets/images/portadasiste.png"/>
+    </div>
+    <div class="hero-content nav-container">
+        <div class="hero-text-box">
+            <div class="hero-subtitle-box">
+                <span class="hero-line"></span>
+                <span class="hero-subtitle">Más de 30 Años de Experiencia</span>
+            </div>
+            <h1 class="hero-title">
+                Protección contra incendios<br/>
+                en Las Palmas, <span class="highlight-text">sin dejar revisiones al azar</span>.
+            </h1>
+            <p class="hero-description">
+                Venta, instalación y mantenimiento de extintores y sistemas PCI para negocios, comunidades y empresas. Empresa canaria con compromiso absoluto con el cumplimiento normativo.
+            </p>
+            <div class="hero-actions">
+                <a href="tel:+34900000000" class="btn-primary">
+                    Llamar ahora
+                    <span class="material-symbols-outlined icon-phone">call</span>
+                </a>
+                <a href="presupuesto.html" class="btn-secondary glass-card">
+                    Pedir presupuesto
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sobre Nosotros Section -->
+<section id="nosotros" class="about-section">
+    <div class="nav-container">
+        <div class="about-content">
+
+            <!-- LEFT: Text -->
+            <div class="about-text">
+                <p class="section-subtitle">Nuestra Trayectoria</p>
+                <h2 class="section-title">Protegiendo lo que más importa desde <span class="highlight-text">1992</span></h2>
+                <p class="about-lead">
+                    En ASISTE CONTRAINCENDIOS somos especialistas en prevención y supresión de incendios en Las Palmas de Gran Canaria. Más de tres décadas de experiencia nos avalan en la instalación, mantenimiento y revisión de sistemas PCI para negocios, comunidades e industrias.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <span class="material-symbols-outlined">verified</span>
+                        Empresa homologada y certificada por organismos oficiales
+                    </div>
+                    <div class="about-feature-item">
+                        <span class="material-symbols-outlined">verified</span>
+                        Técnicos especializados con formación continua
+                    </div>
+                    <div class="about-feature-item">
+                        <span class="material-symbols-outlined">verified</span>
+                        Atención personalizada y respuesta de emergencias 24/7
+                    </div>
+                </div>
+                <div class="about-stats-row">
+                    <div class="about-stat">
+                        <div class="stat-number">+30</div>
+                        <div class="stat-label">Años de exp.</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte</div>
+                    </div>
+                </div>
+                <a href="conocenos.html" class="btn-primary" style="align-self: flex-start;">Conócenos más</a>
+            </div>
+
+            <!-- RIGHT: Image -->
+            <div class="about-image-block">
+                <div class="about-img-frame">
+                    <img src="assets/images/imagenempresa.png" alt="Equipo ASISTE CONTRAINCENDIOS" class="about-img"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Servicios Section (Remodeled) -->
+<section id="servicios" class="services-section">
+    <div class="nav-container">
+        <div class="services-header">
+            <div class="services-title-box">
+                <p class="section-subtitle">Lo Que Hacemos</p>
+                <h2 class="section-title">Nuestros <span class="highlight-text">Servicios</span></h2>
+                <p class="section-description">Soluciones integrales de protección contra incendios adaptadas a cada necesidad.</p>
+            </div>
+            <div class="services-nav-arrows">
+                <button class="carousel-arrow carousel-arrow-left" id="carousel-prev" aria-label="Anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button class="carousel-arrow carousel-arrow-right" id="carousel-next" aria-label="Siguiente">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-carousel" id="services-carousel">
+        <div class="services-track">
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen1.png" alt="Sistemas de Extinción" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">01</span>
+                    <h3 class="service-card-title">Sistemas de Extinción</h3>
+                    <p class="service-card-desc">Extintores, BIEs y sistemas automáticos de supresión para todo tipo de instalaciones.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen2.png" alt="Detección y Alarma" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">02</span>
+                    <h3 class="service-card-title">Detección y Alarma</h3>
+                    <p class="service-card-desc">Centrales de detección, pulsadores, sirenas y sistemas de alarma inteligentes.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen3.png" alt="Mantenimiento PCI" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">03</span>
+                    <h3 class="service-card-title">Mantenimiento PCI</h3>
+                    <p class="service-card-desc">Revisiones trimestrales y anuales de todos los equipos bajo normativa vigente.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen4.png" alt="Ingeniería y Proyectos" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">04</span>
+                    <h3 class="service-card-title">Ingeniería y Proyectos</h3>
+                    <p class="service-card-desc">Diseño e ingeniería de sistemas PCI a medida con planes de emergencia y evacuación.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen5.png" alt="Señalización y Emergencia" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">05</span>
+                    <h3 class="service-card-title">Señalización y Emergencia</h3>
+                    <p class="service-card-desc">Señalética fotoluminiscente, alumbrado de emergencia y planes de evacuación.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="service-card">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/imagen6.png" alt="Puertas Cortafuegos" class="service-card-img"/>
+                </div>
+                <div class="service-card-overlay"></div>
+                <div class="service-card-content">
+                    <span class="service-card-number">06</span>
+                    <h3 class="service-card-title">Puertas Cortafuegos</h3>
+                    <p class="service-card-desc">Instalación y mantenimiento de puertas cortafuegos homologadas y resistentes al fuego.</p>
+                    <div class="service-card-cta">
+                        Ver más
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <div class="services-footer">
+            <div class="carousel-dots" id="carousel-dots">
+                <div class="carousel-dot active" data-index="0">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">01</span>
+                </div>
+                <div class="carousel-dot" data-index="1">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">02</span>
+                </div>
+                <div class="carousel-dot" data-index="2">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">03</span>
+                </div>
+                <div class="carousel-dot" data-index="3">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">04</span>
+                </div>
+                <div class="carousel-dot" data-index="4">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">05</span>
+                </div>
+                <div class="carousel-dot" data-index="5">
+                    <span class="material-symbols-outlined dot-flame">local_fire_department</span>
+                    <span class="dot-num">06</span>
+                </div>
+                <div class="carousel-dot-line"></div>
+            </div>
+            <a href="#" class="btn-primary services-all-btn">
+                Conoce todos los servicios
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Procedimiento de trabajo (Timeline) -->
+<section id="procedimiento" class="timeline-section">
+    <div class="nav-container">
+        <div class="timeline-header">
+            <p class="section-subtitle text-center">Cómo Trabajamos</p>
+            <h2 class="section-title text-center">Procedimiento de Trabajo</h2>
+            <div class="technical-line center-line"></div>
+        </div>
+        <div class="timeline-grid">
+            <div class="connector-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <h4 class="timeline-title">Contacta con nosotros</h4>
+                    <p class="timeline-desc">
+                        <span class="timeline-subtext">Llama o solicita presupuesto desde la web</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <h4 class="timeline-title">Revisamos tus necesidades</h4>
+                    <p class="timeline-desc">Extintores, instalación nueva, mantenimiento o sistema PCI.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-number">03</div>
+                <div class="timeline-content">
+                    <h4 class="timeline-title">Te orientamos</h4>
+                    <p class="timeline-desc">Explicamos qué necesitas y cómo podemos ayudarte.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-number">04</div>
+                <div class="timeline-content">
+                    <h4 class="timeline-title">Instalamos o mantenemos</h4>
+                    <p class="timeline-desc">Realizamos el servicio con profesionalidad y control.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-number highlight-number">05</div>
+                <div class="timeline-content">
+                    <h4 class="timeline-title highlight-title">Seguimiento de revisiones</h4>
+                    <p class="timeline-desc">Ayudamos a mantener el servicio al día cuando corresponda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clientes (Reseñas) -->
+<section id="clientes" class="reviews-section">
+
+    <!-- Header -->
+    <div class="nav-container">
+        <div class="reviews-header">
+            <div class="reviews-header-left">
+                <p class="section-subtitle">Testimonios</p>
+                <h2 class="section-title">Lo que dicen <span class="highlight-text">nuestros clientes</span></h2>
+                <p class="section-description">La confianza de quienes ya protegen sus instalaciones con nosotros. Más de 30 años de reputación intachable en Gran Canaria.</p>
+            </div>
+            <div class="reviews-rating-badge">
+                <div class="rating-score">4.9</div>
+                <div class="rating-detail">
+                    <div class="rating-stars-row">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="rating-count">Basado en +30 reseñas</span>
+                    <div class="rating-source">
+                        <span class="material-symbols-outlined rating-source-icon">grade</span>
+                        <span>Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Carousel -->
+    <div class="reviews-carousel" id="reviews-carousel">
+        <div class="reviews-track">
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"El servicio de mantenimiento de nuestros sistemas de extinción es impecable. Profesionales, rápidos y siempre disponibles ante cualquier duda normativa."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">domain</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Hotel Marina Sol</span>
+                        <span class="author-role">Las Palmas · Hotel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Instalaron todo el sistema de detección en nuestra nueva nave industrial. Un trabajo limpio, eficiente y cumpliendo rigurosamente los plazos acordados."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">factory</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Logística Canaria S.L.</span>
+                        <span class="author-role">Telde · Industria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Llevamos años confiando en ellos para la revisión anual de los extintores de nuestras oficinas. Nunca fallan y su equipo técnico es excepcional."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">business_center</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Grupo Empresarial Norte</span>
+                        <span class="author-role">Arucas · Oficinas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Respuesta rapidísima cuando necesitamos urgentemente revisar nuestros sistemas antes de una inspección. Nos salvaron de una multa. ¡Totalmente recomendados!"</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">store</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Supermercados Atlántico</span>
+                        <span class="author-role">Las Palmas · Retail</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Gestión impecable de la documentación obligatoria. Nos enviaron los certificados al día siguiente de la revisión. Muy profesionales y organizados."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">apartment</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Comunidad Las Acacias</span>
+                        <span class="author-role">Las Palmas · Comunidad</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card review-card--featured">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Llevamos con ASISTE desde que abrimos el restaurante hace 12 años. Son de confianza absoluta, puntuales, conocen la normativa al detalle y el precio es muy competitivo."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">restaurant</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Restaurante El Mirador</span>
+                        <span class="author-role">Las Palmas · Restauración</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Trato cercano, sin complicaciones. Nos explicaron todo lo que necesitábamos sin tecnicismos. Instalación perfecta y en menos tiempo del estimado."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">school</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Academia Formativa Canaria</span>
+                        <span class="author-role">Telde · Educación</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card glass-card">
+                <div class="review-top">
+                    <div class="review-stars">
+                        <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                    </div>
+                    <span class="review-google-tag">Google</span>
+                </div>
+                <p class="review-text">"Empresa seria, con todos los papeles en regla y técnicos muy bien formados. Nos cambiaron los extintores caducados y dejaron todo documentado para la próxima revisión."</p>
+                <div class="review-author">
+                    <div class="author-avatar"><span class="material-symbols-outlined">local_hospital</span></div>
+                    <div class="author-info">
+                        <span class="author-name">Clínica Dental Atlántico</span>
+                        <span class="author-role">Las Palmas · Sanidad</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- Horario y Mapa -->
+<section id="horario-mapa" class="info-section">
+    <div class="nav-container info-grid">
+        <div class="schedule-box glass-card">
+            <h2 class="section-title">Horario y <span class="highlight-text">Atención</span></h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <div class="info-icon-box"><span class="material-symbols-outlined info-icon">calendar_month</span></div>
+                    <div class="schedule-text">
+                        <span class="schedule-days">Lunes a Viernes</span>
+                        <span class="schedule-hours">08:00 - 18:00</span>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="info-icon-box highlight-box"><span class="material-symbols-outlined info-icon highlight-icon">warning</span></div>
+                    <div class="schedule-text">
+                        <span class="schedule-days highlight-alt">Emergencias Técnicas</span>
+                        <a href="tel:+34900000000" class="schedule-hours">900 000 000</a>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="info-icon-box"><span class="material-symbols-outlined info-icon">location_on</span></div>
+                    <div class="schedule-text">
+                        <span class="schedule-days">Nuestras Instalaciones</span>
+                        <span class="schedule-hours">C. Cabrera Barrios, 4<br/>Las Palmas</span>
+                    </div>
+                </div>
+            </div>
+            <a href="tel:+34900000000" class="btn-primary mt-4">
+                Llamar a Oficinas
+            </a>
+        </div>
+        <div class="map-container glass-card">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.8665672852234!2d-15.422791423719468!3d28.089851108502393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4095bb4c00b0e5%3A0xc39f286cb6c97ab3!2sC.%20Cabrera%20Barrios%2C%204%2C%2035010%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1709210000000!5m2!1ses!2ses" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: invert(90%) hue-rotate(180deg) grayscale(80%) contrast(120%);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="nav-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand-header">
+                    <img alt="ASISTE CONTRAINCENDIOS" class="footer-logo" src="assets/images/logo.png"/>
+                </div>
+                <p class="brand-desc">Líderes en prevención y supresión de incendios. Salvaguardando el futuro con tecnología de vanguardia y precisión técnica inigualable.</p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Explorar</h4>
+                <ul class="footer-list">
+                    <li><a href="#nosotros" class="footer-link">Sobre nosotros</a></li>
+                    <li><a href="#servicios" class="footer-link">Servicios</a></li>
+                    <li><a href="#procedimiento" class="footer-link">Procedimiento</a></li>
+                    <li><a href="#clientes" class="footer-link">Reseñas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-list">
+                    <li><a href="#horario-mapa" class="footer-link">Horario y Ubicación</a></li>
+                    <li><a href="tel:+34900000000" class="footer-link">Teléfono Asistencia</a></li>
+                    <li><a href="mailto:info@asiste.com" class="footer-link">info@asiste.com</a></li>
+                    <li><a href="presupuesto.html" class="footer-link">Presupuestos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="#" class="footer-link">Aviso Legal</a></li>
+                    <li><a href="#" class="footer-link">Política de Privacidad</a></li>
+                    <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by guillediaz06</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

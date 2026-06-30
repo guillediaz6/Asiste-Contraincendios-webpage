@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Conócenos - ASISTE CONTRAINCENDIOS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<header id="top-bar" class="main-header">
+    <nav class="nav-container">
+        <a href="index.html" class="logo-link">
+            <img alt="ASISTE CONTRAINCENDIOS" id="header-logo" class="logo-img" src="assets/images/logo.png"/>
+        </a>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined menu-icon">menu</span>
+        </button>
+    </nav>
+</header>
+
+<!-- Lateral Navigation Drawer Wrapper -->
+<div id="nav-drawer" class="drawer-wrapper hidden">
+    <div id="nav-drawer-overlay" class="drawer-overlay" onclick="toggleMenu()"></div>
+    <div id="nav-drawer-panel" class="drawer-panel hidden-panel">
+        <button class="close-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <div class="drawer-content">
+            <div class="drawer-nav-section">
+                <h2 class="drawer-title">Navegación</h2>
+                <nav class="drawer-nav">
+                    <a href="index.html" class="drawer-link">Inicio</a>
+                    <a href="conocenos.html" class="drawer-link" onclick="toggleMenu()">Sobre nosotros</a>
+                    <a href="index.html#servicios" class="drawer-link" onclick="toggleMenu()">Servicios</a>
+                    <a href="index.html#procedimiento" class="drawer-link" onclick="toggleMenu()">Procedimiento</a>
+                    <a href="index.html#clientes" class="drawer-link" onclick="toggleMenu()">Clientes</a>
+                    <a href="index.html#horario-mapa" class="drawer-link" onclick="toggleMenu()">Ubicación</a>
+                </nav>
+            </div>
+
+            <div class="drawer-footer">
+                <a href="tel:+34900000000" class="emergency-phone">900 000 000</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Page Title -->
+<section class="hero-section" style="min-height: 50vh;">
+    <div class="hero-background">
+        <div class="overlay-gradient-top"></div>
+        <div class="overlay-gradient-r"></div>
+        <div class="overlay-gradient-t"></div>
+        <div class="overlay-radial"></div>
+        <img alt="ASISTE CONTRAINCENDIOS - Equipo" class="hero-img" src="assets/images/imagenempresa.png" style="object-position: center 20%;"/>
+    </div>
+    <div class="hero-content nav-container">
+        <div class="hero-text-box">
+            <h1 class="hero-title">
+                Sobre <span class="highlight-text">Nosotros</span>
+            </h1>
+            <p class="hero-description">
+                Conoce más sobre la historia, los valores y el compromiso de ASISTE CONTRAINCENDIOS con tu seguridad.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Info Section -->
+<section class="about-section">
+    <div class="nav-container">
+        <div class="about-content" style="display: block;">
+            <div class="about-text" style="max-width: 100%;">
+                <p class="section-subtitle">Nuestra Filosofía</p>
+                <h2 class="section-title">Comprometidos con la excelencia y la prevención</h2>
+                <p class="about-lead">
+                    Fundada en 1992, ASISTE CONTRAINCENDIOS nace de la vocación de proteger vidas y bienes en Las Palmas de Gran Canaria. Nuestro equipo está compuesto por profesionales altamente cualificados que comprenden la importancia de estar preparados ante cualquier eventualidad.
+                </p>
+                <p class="about-lead">
+                    No solo instalamos y mantenemos equipos de protección, sino que educamos, asesoramos y diseñamos planes a medida para garantizar que cada cliente cumpla con las normativas más estrictas de seguridad. Desde la revisión de un extintor hasta el diseño integral de un sistema de extinción automático en una nave industrial, tratamos cada proyecto con el máximo rigor.
+                </p>
+                <div class="about-features" style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="about-feature-item" style="flex-direction: column; align-items: flex-start; text-align: left;">
+                        <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">gpp_good</span>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">Calidad Garantizada</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Materiales y equipos homologados y probados.</p>
+                    </div>
+                    <div class="about-feature-item" style="flex-direction: column; align-items: flex-start; text-align: left;">
+                        <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">engineering</span>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">Equipo Experto</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Técnicos certificados y en constante formación.</p>
+                    </div>
+                    <div class="about-feature-item" style="flex-direction: column; align-items: flex-start; text-align: left;">
+                        <span class="material-symbols-outlined" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">support_agent</span>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">Servicio 24/7</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Atención ininterrumpida para emergencias técnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Full-width Map / Street View Section -->
+<section style="padding: 0; position: relative; background: #000000;">
+    <div class="map-container" style="width: 100%; height: 60vh; border-radius: 0;">
+        <!-- Street View Embed -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!3m2!1ses!2ses!4v1781299762833!5m2!1ses!2ses!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6YUtFQmc.!2m2!1d28.11973899622029!2d-15.44997355334652!3f182.90718322794024!4f2.076050885293924!5f0.7820865974627469" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="nav-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand-header">
+                    <img alt="ASISTE CONTRAINCENDIOS" class="footer-logo" src="assets/images/logo.png"/>
+                </div>
+                <p class="brand-desc">Líderes en prevención y supresión de incendios. Salvaguardando el futuro con tecnología de vanguardia y precisión técnica inigualable.</p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Explorar</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html#nosotros" class="footer-link">Sobre nosotros</a></li>
+                    <li><a href="index.html#servicios" class="footer-link">Servicios</a></li>
+                    <li><a href="index.html#procedimiento" class="footer-link">Procedimiento</a></li>
+                    <li><a href="index.html#clientes" class="footer-link">Reseñas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html#horario-mapa" class="footer-link">Horario y Ubicación</a></li>
+                    <li><a href="tel:+34900000000" class="footer-link">Teléfono Asistencia</a></li>
+                    <li><a href="mailto:info@asiste.com" class="footer-link">info@asiste.com</a></li>
+                    <li><a href="presupuesto.html" class="footer-link">Presupuestos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="#" class="footer-link">Aviso Legal</a></li>
+                    <li><a href="#" class="footer-link">Política de Privacidad</a></li>
+                    <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by guillediaz06</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
