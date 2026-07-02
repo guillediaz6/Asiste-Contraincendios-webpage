@@ -142,4 +142,63 @@ document.addEventListener('DOMContentLoaded', () => {
             reviewsCarousel.scrollLeft = rScrollLeft - walk;
         });
     }
+
+    // --- Cookie & Map Banner Logic ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+    const acceptMapBtns = document.querySelectorAll('.accept-map-cookies');
+
+    function loadMaps() {
+        const lazyMaps = document.querySelectorAll('.lazy-map');
+        lazyMaps.forEach(mapDiv => {
+            const src = mapDiv.getAttribute('data-src');
+            const style = mapDiv.getAttribute('data-style');
+            if (src) {
+                const iframe = document.createElement('iframe');
+                iframe.src = src;
+                if (style) iframe.style.cssText = style;
+                iframe.allowFullscreen = true;
+                iframe.loading = 'lazy';
+                iframe.referrerPolicy = 'no-referrer-when-downgrade';
+                
+                // Remove placeholder and append iframe
+                const container = mapDiv.parentElement;
+                const placeholder = container.querySelector('.map-placeholder');
+                if (placeholder) placeholder.remove();
+                
+                container.appendChild(iframe);
+                mapDiv.remove(); // Remove the lazy-map div
+            }
+        });
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        if (cookieBanner) {
+            cookieBanner.classList.remove('show');
+            setTimeout(() => cookieBanner.classList.add('hidden'), 400); // Wait for transition
+        }
+        loadMaps();
+    }
+
+    // Check on load
+    if (localStorage.getItem('cookiesAccepted')) {
+        loadMaps();
+    } else {
+        if (cookieBanner) {
+            // Show banner after a short delay
+            setTimeout(() => {
+                cookieBanner.classList.remove('hidden');
+                setTimeout(() => cookieBanner.classList.add('show'), 50);
+            }, 1000);
+        }
+    }
+
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', acceptCookies);
+    }
+    
+    acceptMapBtns.forEach(btn => {
+        btn.addEventListener('click', acceptCookies);
+    });
 });

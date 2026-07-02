@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nuestros Servicios - ASISTE CONTRAINCENDIOS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <style>
+        .contact-section {
+            padding-top: 180px; 
+            padding-bottom: 120px; 
+            background: linear-gradient(to bottom, transparent calc(100% - 180px), var(--color-surface-lowest) 100%), var(--color-background);
+            position: relative;
+        }
+        /* Force header to always look like the scrolled (thin, dark, blurred) state */
+        .main-header {
+            height: 70px !important;
+            background: rgba(18, 20, 20, 0.95) !important;
+            backdrop-filter: blur(40px) !important;
+            -webkit-backdrop-filter: blur(40px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55) !important;
+        }
+        @media (min-width: 768px) {
+            .main-header {
+                height: 80px !important;
+            }
+        }
+        .main-header .logo-img {
+            height: 32px !important;
+            width: 101px !important;
+            filter: brightness(0) invert(1) !important;
+        }
+        @media (min-width: 768px) {
+            .main-header .logo-img {
+                height: 42px !important;
+                width: 132px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<header id="top-bar" class="main-header">
+    <nav class="nav-container">
+        <a href="index.html" class="logo-link">
+            <img alt="ASISTE CONTRAINCENDIOS" id="header-logo" class="logo-img" src="assets/images/logo.png"/>
+        </a>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined menu-icon">menu</span>
+        </button>
+    </nav>
+</header>
+
+<!-- Lateral Navigation Drawer Wrapper -->
+<div id="nav-drawer" class="drawer-wrapper hidden">
+    <div id="nav-drawer-overlay" class="drawer-overlay" onclick="toggleMenu()"></div>
+    <div id="nav-drawer-panel" class="drawer-panel hidden-panel">
+        <button class="close-btn" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <div class="drawer-content">
+            <div class="drawer-nav-section">
+                <h2 class="drawer-title">Navegación</h2>
+                <nav class="drawer-nav">
+                    <a href="index.html" class="drawer-link">Inicio</a>
+                    <a href="conocenos.html" class="drawer-link" onclick="toggleMenu()">Sobre nosotros</a>
+                    <a href="servicios.html" class="drawer-link" onclick="toggleMenu()">Servicios</a>
+                    <a href="index.html#procedimiento" class="drawer-link" onclick="toggleMenu()">Procedimiento</a>
+                    <a href="index.html#clientes" class="drawer-link" onclick="toggleMenu()">Clientes</a>
+                    <a href="index.html#horario-mapa" class="drawer-link" onclick="toggleMenu()">Ubicación y Contacto</a>
+                </nav>
+            </div>
+
+            <div class="drawer-footer">
+                <a href="tel:+34828690029" class="emergency-phone">828 690 029</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Services Section -->
+<section class="contact-section">
+    <div class="nav-container">
+        <div class="services-header" style="text-align: left; margin-bottom: 60px; display: block; max-width: 600px;">
+            <p class="section-subtitle" style="font-family: var(--font-label); color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Soluciones Profesionales</p>
+            <h1 class="section-title" style="margin-bottom: 24px;">Nuestros <span class="highlight-text">Servicios</span></h1>
+            <p class="section-description" style="font-size: 18px; line-height: 1.6;">Soluciones integrales de protección contra incendios adaptadas a cada necesidad.</p>
+        </div>
+
+        <!-- Accordion Services List -->
+        <div class="srv-accordion">
+
+            <!-- 1. Sistema de detección de monóxido de carbono -->
+            <div class="srv-item" id="srv-1">
+                <button class="srv-trigger" onclick="toggleService('srv-1')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">01</span>
+                        <span class="srv-name">Sistema de detección de monóxido de carbono</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Sistema de detección y alarma de incendio -->
+            <div class="srv-item" id="srv-2">
+                <button class="srv-trigger" onclick="toggleService('srv-2')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">02</span>
+                        <span class="srv-name">Sistema de detección y alarma de incendio</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                            <div class="srv-subservices">
+                                <h4 class="srv-subservices-title">Incluye:</h4>
+                                <ul class="srv-subservices-list">
+                                    <li>Centrales de detección</li>
+                                    <li>Pulsadores</li>
+                                    <li>Sirenas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Abastecimiento de agua contraincendios -->
+            <div class="srv-item" id="srv-3">
+                <button class="srv-trigger" onclick="toggleService('srv-3')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">03</span>
+                        <span class="srv-name">Abastecimiento de agua contraincendios (grupo de bombas)</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Boca de incendios equipadas (BIEs) -->
+            <div class="srv-item" id="srv-4">
+                <button class="srv-trigger" onclick="toggleService('srv-4')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">04</span>
+                        <span class="srv-name">Boca de incendios equipadas (BIEs)</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Hidrantes -->
+            <div class="srv-item" id="srv-5">
+                <button class="srv-trigger" onclick="toggleService('srv-5')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">05</span>
+                        <span class="srv-name">Hidrantes</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Columnas secas -->
+            <div class="srv-item" id="srv-6">
+                <button class="srv-trigger" onclick="toggleService('srv-6')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">06</span>
+                        <span class="srv-name">Columnas secas</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Sistemas fijos de extinción -->
+            <div class="srv-item" id="srv-7">
+                <button class="srv-trigger" onclick="toggleService('srv-7')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">07</span>
+                        <span class="srv-name">Sistemas fijos de extinción</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                            <div class="srv-subservices">
+                                <h4 class="srv-subservices-title">Incluye:</h4>
+                                <ul class="srv-subservices-list">
+                                    <li>Rociadores automáticos</li>
+                                    <li>Sistemas automáticos de extinción de campanas de cocina</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Señalización fotoluminiscente -->
+            <div class="srv-item" id="srv-8">
+                <button class="srv-trigger" onclick="toggleService('srv-8')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">08</span>
+                        <span class="srv-name">Señalización fotoluminiscente</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Venta, mantenimiento e instalación de extintores -->
+            <div class="srv-item" id="srv-9">
+                <button class="srv-trigger" onclick="toggleService('srv-9')" aria-expanded="false">
+                    <div class="srv-trigger-left">
+                        <span class="srv-number">09</span>
+                        <span class="srv-name">Venta, mantenimiento e instalación de extintores</span>
+                    </div>
+                    <span class="material-symbols-outlined srv-icon">add</span>
+                </button>
+                <div class="srv-panel">
+                    <div class="srv-panel-inner">
+                        <div class="srv-panel-image">
+                            <div class="srv-img-placeholder">
+                                <span class="material-symbols-outlined">image</span>
+                                <span>Imagen próximamente</span>
+                            </div>
+                        </div>
+                        <div class="srv-panel-text">
+                            <p class="srv-desc">Información sobre este servicio próximamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="margin-top: 64px; text-align: center;">
+            <a href="index.html#horario-mapa" class="btn-primary">
+                Solicitar presupuesto
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* ---- ACCORDION SERVICES ---- */
+.srv-accordion {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+.srv-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.srv-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0;
+    gap: 16px;
+    text-align: left;
+    transition: background 0.2s;
+}
+.srv-trigger:hover .srv-name {
+    color: var(--color-secondary);
+}
+.srv-trigger-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.srv-number {
+    font-family: var(--font-headline);
+    font-size: 13px;
+    color: var(--color-secondary);
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+.srv-name {
+    font-family: var(--font-headline);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: white;
+    transition: color 0.3s;
+}
+@media (min-width: 768px) {
+    .srv-name { font-size: 26px; }
+}
+.srv-icon {
+    font-size: 28px;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.srv-item.open .srv-icon {
+    transform: rotate(45deg);
+}
+.srv-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+    overflow: hidden;
+}
+.srv-item.open .srv-panel {
+    grid-template-rows: 1fr;
+}
+.srv-panel-inner {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s, padding 0.45s;
+}
+@media (min-width: 768px) {
+    .srv-panel-inner {
+        grid-template-columns: 340px 1fr;
+    }
+}
+.srv-item.open .srv-panel-inner {
+    opacity: 1;
+    transform: translateY(0);
+    padding-bottom: 40px;
+}
+.srv-panel-image {
+    width: 100%;
+}
+.srv-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: rgba(255,255,255,0.04);
+    border: 2px dashed rgba(255,255,255,0.12);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.25);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+.srv-img-placeholder .material-symbols-outlined {
+    font-size: 40px;
+    opacity: 0.4;
+}
+.srv-panel-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.srv-desc {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    line-height: 1.75;
+}
+.srv-subservices-title {
+    font-family: var(--font-label);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+.srv-subservices-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.srv-subservices-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+}
+.srv-subservices-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    flex-shrink: 0;
+}
+</style>
+
+<script>
+function toggleService(id) {
+    const item = document.getElementById(id);
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.srv-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.srv-trigger').setAttribute('aria-expanded', 'false');
+    });
+    // Open clicked if it was closed
+    if (!isOpen) {
+        item.classList.add('open');
+        item.querySelector('.srv-trigger').setAttribute('aria-expanded', 'true');
+    }
+}
+</script>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner hidden">
+    <div class="cookie-content">
+        <p>Utilizamos cookies propias para recordar sus preferencias (como la aceptación de este aviso) y contenido de terceros (Google Maps) que puede instalar cookies analíticas. Puede aceptarlas todas o continuar navegando.</p>
+        <div class="cookie-actions">
+            <a href="legal.html#cookies" class="cookie-link">Más información</a>
+            <button id="accept-cookies" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">Aceptar y cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="nav-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand-header">
+                    <img alt="ASISTE CONTRAINCENDIOS" class="footer-logo" src="assets/images/logo.png"/>
+                </div>
+                <p class="brand-desc">Líderes en prevención y supresión de incendios. Salvaguardando el futuro con tecnología de vanguardia y precisión técnica inigualable.</p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Explorar</h4>
+                <ul class="footer-list">
+                    <li><a href="conocenos.html" class="footer-link">Sobre nosotros</a></li>
+                    <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                    <li><a href="index.html#procedimiento" class="footer-link">Procedimiento</a></li>
+                    <li><a href="index.html#clientes" class="footer-link">Reseñas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html#horario-mapa" class="footer-link">Horario y Ubicación</a></li>
+                    <li><a href="tel:+34828690029" class="footer-link">Teléfono Asistencia</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=asistecontraincendios@yahoo.es" target="_blank" class="footer-link">asistecontraincendios@yahoo.es</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="legal.html#aviso-legal" class="footer-link">Aviso Legal</a></li>
+                    <li><a href="legal.html#privacidad" class="footer-link">Política de Privacidad</a></li>
+                    <li><a href="legal.html#cookies" class="footer-link">Política de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by <a href="https://guillediaz6.github.io/portfolio" target="_blank" style="color: inherit; text-decoration: none;">gdm.developer</a></p>
+            <div class="social-links">
+                <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
+                <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

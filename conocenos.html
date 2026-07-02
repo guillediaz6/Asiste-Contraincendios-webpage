@@ -35,22 +35,22 @@
                 <nav class="drawer-nav">
                     <a href="index.html" class="drawer-link">Inicio</a>
                     <a href="conocenos.html" class="drawer-link" onclick="toggleMenu()">Sobre nosotros</a>
-                    <a href="index.html#servicios" class="drawer-link" onclick="toggleMenu()">Servicios</a>
+                    <a href="servicios.html" class="drawer-link" onclick="toggleMenu()">Servicios</a>
                     <a href="index.html#procedimiento" class="drawer-link" onclick="toggleMenu()">Procedimiento</a>
                     <a href="index.html#clientes" class="drawer-link" onclick="toggleMenu()">Clientes</a>
-                    <a href="index.html#horario-mapa" class="drawer-link" onclick="toggleMenu()">Ubicación</a>
+                    <a href="index.html#horario-mapa" class="drawer-link" onclick="toggleMenu()">Ubicación y Contacto</a>
                 </nav>
             </div>
 
             <div class="drawer-footer">
-                <a href="tel:+34900000000" class="emergency-phone">900 000 000</a>
+                <a href="tel:+34828690029" class="emergency-phone">828 690 029</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Hero Page Title -->
-<section class="hero-section" style="min-height: 50vh;">
+<section class="hero-section">
     <div class="hero-background">
         <div class="overlay-gradient-top"></div>
         <div class="overlay-gradient-r"></div>
@@ -78,7 +78,7 @@
                 <p class="section-subtitle">Nuestra Filosofía</p>
                 <h2 class="section-title">Comprometidos con la excelencia y la prevención</h2>
                 <p class="about-lead">
-                    Fundada en 1992, ASISTE CONTRAINCENDIOS nace de la vocación de proteger vidas y bienes en Las Palmas de Gran Canaria. Nuestro equipo está compuesto por profesionales altamente cualificados que comprenden la importancia de estar preparados ante cualquier eventualidad.
+                    Fundada en 2014, ASISTE CONTRAINCENDIOS nace de la vocación de proteger vidas y bienes en Las Palmas de Gran Canaria, respaldada por personal con más de 30 años de experiencia en el sector. Nuestro equipo está compuesto por profesionales altamente cualificados que comprenden la importancia de estar preparados ante cualquier eventualidad.
                 </p>
                 <p class="about-lead">
                     No solo instalamos y mantenemos equipos de protección, sino que educamos, asesoramos y diseñamos planes a medida para garantizar que cada cliente cumpla con las normativas más estrictas de seguridad. Desde la revisión de un extintor hasta el diseño integral de un sistema de extinción automático en una nave industrial, tratamos cada proyecto con el máximo rigor.
@@ -107,19 +107,27 @@
 
 <!-- Full-width Map / Street View Section -->
 <section style="padding: 0; position: relative; background: #000000;">
-    <div class="map-container" style="width: 100%; height: 60vh; border-radius: 0;">
-        <!-- Street View Embed -->
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!3m2!1ses!2ses!4v1781299762833!5m2!1ses!2ses!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6YUtFQmc.!2m2!1d28.11973899622029!2d-15.44997355334652!3f182.90718322794024!4f2.076050885293924!5f0.7820865974627469" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <div class="map-container" style="width: 100%; height: 60vh; border-radius: 0; position: relative;">
+        <div class="map-placeholder">
+            <span class="material-symbols-outlined">map</span>
+            <p>Para visualizar el mapa interactivo de Google Maps, debes aceptar las cookies de terceros.</p>
+            <button class="btn-primary accept-map-cookies" style="padding: 10px 24px; font-size: 14px;">Aceptar Cookies</button>
+        </div>
+        <!-- Street View Embed lazy container -->
+        <div class="lazy-map" data-src="https://www.google.com/maps/embed?pb=!3m2!1ses!2ses!4v1781299762833!5m2!1ses!2ses!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6YUtFQmc.!2m2!1d28.11973899622029!2d-15.44997355334652!3f182.90718322794024!4f2.076050885293924!5f0.7820865974627469" data-style="border:0; width: 100%; height: 100%;"></div>
     </div>
 </section>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner hidden">
+    <div class="cookie-content">
+        <p>Utilizamos cookies propias para recordar sus preferencias (como la aceptación de este aviso) y contenido de terceros (Google Maps) que puede instalar cookies analíticas. Puede aceptarlas todas o continuar navegando.</p>
+        <div class="cookie-actions">
+            <a href="legal.html#cookies" class="cookie-link">Más información</a>
+            <button id="accept-cookies" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">Aceptar y cerrar</button>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer class="main-footer">
@@ -136,7 +144,7 @@
                 <h4 class="footer-title">Explorar</h4>
                 <ul class="footer-list">
                     <li><a href="index.html#nosotros" class="footer-link">Sobre nosotros</a></li>
-                    <li><a href="index.html#servicios" class="footer-link">Servicios</a></li>
+                    <li><a href="servicios.html" class="footer-link">Servicios</a></li>
                     <li><a href="index.html#procedimiento" class="footer-link">Procedimiento</a></li>
                     <li><a href="index.html#clientes" class="footer-link">Reseñas</a></li>
                 </ul>
@@ -146,24 +154,23 @@
                 <h4 class="footer-title">Contacto</h4>
                 <ul class="footer-list">
                     <li><a href="index.html#horario-mapa" class="footer-link">Horario y Ubicación</a></li>
-                    <li><a href="tel:+34900000000" class="footer-link">Teléfono Asistencia</a></li>
-                    <li><a href="mailto:info@asiste.com" class="footer-link">info@asiste.com</a></li>
-                    <li><a href="presupuesto.html" class="footer-link">Presupuestos</a></li>
+                    <li><a href="tel:+34828690029" class="footer-link">Teléfono Asistencia</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=asistecontraincendios@yahoo.es" target="_blank" class="footer-link">asistecontraincendios@yahoo.es</a></li>
                 </ul>
             </div>
             
             <div class="footer-links-col">
                 <h4 class="footer-title">Legal</h4>
                 <ul class="footer-list">
-                    <li><a href="#" class="footer-link">Aviso Legal</a></li>
-                    <li><a href="#" class="footer-link">Política de Privacidad</a></li>
-                    <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                    <li><a href="legal.html#aviso-legal" class="footer-link">Aviso Legal</a></li>
+                    <li><a href="legal.html#privacidad" class="footer-link">Política de Privacidad</a></li>
+                    <li><a href="legal.html#cookies" class="footer-link">Política de Cookies</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by guillediaz06</p>
+            <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by <a href="https://guillediaz6.github.io/portfolio" target="_blank" style="color: inherit; text-decoration: none;">gdm.developer</a></p>
             <div class="social-links">
                 <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
                 <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
