@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Cookie & Map Banner Logic ---
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptCookiesBtn = document.getElementById('accept-cookies');
+    const rejectCookiesBtn = document.getElementById('reject-cookies');
     const acceptMapBtns = document.querySelectorAll('.accept-map-cookies');
 
     function loadMaps() {
@@ -181,10 +182,21 @@ document.addEventListener('DOMContentLoaded', () => {
         loadMaps();
     }
 
+    function rejectCookies() {
+        localStorage.setItem('cookiesAccepted', 'false');
+        if (cookieBanner) {
+            cookieBanner.classList.remove('show');
+            setTimeout(() => cookieBanner.classList.add('hidden'), 400); // Wait for transition
+        }
+        // Recargar la página para purgar cualquier mapa/cookie cargada
+        window.location.reload();
+    }
+
     // Check on load
-    if (localStorage.getItem('cookiesAccepted')) {
+    const cookieState = localStorage.getItem('cookiesAccepted');
+    if (cookieState === 'true') {
         loadMaps();
-    } else {
+    } else if (cookieState !== 'false') {
         if (cookieBanner) {
             // Show banner after a short delay
             setTimeout(() => {
@@ -196,6 +208,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (acceptCookiesBtn) {
         acceptCookiesBtn.addEventListener('click', acceptCookies);
+    }
+    
+    if (rejectCookiesBtn) {
+        rejectCookiesBtn.addEventListener('click', rejectCookies);
     }
     
     acceptMapBtns.forEach(btn => {

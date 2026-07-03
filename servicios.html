@@ -515,6 +515,7 @@ function toggleService(id) {
         <p>Utilizamos cookies propias para recordar sus preferencias (como la aceptación de este aviso) y contenido de terceros (Google Maps) que puede instalar cookies analíticas. Puede aceptarlas todas o continuar navegando.</p>
         <div class="cookie-actions">
             <a href="legal.html#cookies" class="cookie-link">Más información</a>
+            <button id="reject-cookies" class="btn-secondary" style="padding: 10px 24px; font-size: 14px;">Rechazar</button>
             <button id="accept-cookies" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">Aceptar y cerrar</button>
         </div>
     </div>
@@ -537,16 +538,7 @@ function toggleService(id) {
                     <li><a href="conocenos.html" class="footer-link">Sobre nosotros</a></li>
                     <li><a href="servicios.html" class="footer-link">Servicios</a></li>
                     <li><a href="index.html#procedimiento" class="footer-link">Procedimiento</a></li>
-                    <li><a href="index.html#clientes" class="footer-link">Reseñas</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-links-col">
-                <h4 class="footer-title">Contacto</h4>
-                <ul class="footer-list">
-                    <li><a href="index.html#horario-mapa" class="footer-link">Horario y Ubicación</a></li>
-                    <li><a href="tel:+34828690029" class="footer-link">Teléfono Asistencia</a></li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=asistecontraincendios@yahoo.es" target="_blank" class="footer-link">asistecontraincendios@yahoo.es</a></li>
+                    <li><a href="index.html#clientes" class="footer-link">Nuestros clientes</a></li>
                 </ul>
             </div>
             
@@ -556,6 +548,7 @@ function toggleService(id) {
                     <li><a href="legal.html#aviso-legal" class="footer-link">Aviso Legal</a></li>
                     <li><a href="legal.html#privacidad" class="footer-link">Política de Privacidad</a></li>
                     <li><a href="legal.html#cookies" class="footer-link">Política de Cookies</a></li>
+                    <li><a href="#" id="open-cookie-config" class="footer-link" onclick="event.preventDefault(); document.getElementById('cookie-banner').classList.remove('hidden'); setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 50);">Configuración de Cookies</a></li>
                 </ul>
             </div>
         </div>
@@ -563,9 +556,7 @@ function toggleService(id) {
         <div class="footer-bottom">
             <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by <a href="https://guillediaz6.github.io/portfolio" target="_blank" style="color: inherit; text-decoration: none;">gdm.developer</a></p>
             <div class="social-links">
-                <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
-                <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
-                <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+                <a href="#" class="social-link" onclick="if(navigator.share) { navigator.share({title: document.title, url: window.location.href}); } event.preventDefault();" title="Compartir página"><span class="material-symbols-outlined">share</span></a>
             </div>
         </div>
     </div>

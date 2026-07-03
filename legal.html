@@ -137,14 +137,15 @@
                 <h2>Aviso Legal</h2>
                 <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), el propietario de la web informa de lo siguiente:</p>
                 <ul>
-                    <li><strong>Denominación social:</strong> [NOMBRE DE LA EMPRESA / AUTÓNOMO]</li>
-                    <li><strong>NIF/CIF:</strong> [NIF/CIF]</li>
-                    <li><strong>Domicilio social:</strong> [DIRECCIÓN POSTAL COMPLETA, CÓDIGO POSTAL, CIUDAD]</li>
+                    <li><strong>Denominación social / Titular:</strong> JOSE RAMON MEDINA VEGA</li>
+                    <li><strong>Nombre comercial:</strong> ASISTE CONTRAINCENDIOS</li>
+                    <li><strong>NIF:</strong> 43669778T</li>
+                    <li><strong>Domicilio social:</strong> Calle Cabrera Barrios Nº 4, Carretera el Cardón-Las Torres, 35010, Las Palmas de Gran Canaria</li>
                     <li><strong>Email de contacto:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asistecontraincendios@yahoo.es" target="_blank">asistecontraincendios@yahoo.es</a></li>
                     <li><strong>Teléfono:</strong> 828 690 029</li>
                 </ul>
-                <p>Con los límites establecidos en la ley, [NOMBRE DE LA EMPRESA] no asume ninguna responsabilidad derivada de la falta de veracidad, integridad, actualización y precisión de los datos o informaciones que contienen sus páginas web.</p>
-                <p>Los contenidos e información no vinculan a [NOMBRE DE LA EMPRESA] ni constituyen opiniones, consejos o asesoramiento legal de ningún tipo pues se trata meramente de un servicio ofrecido con carácter informativo y divulgativo.</p>
+                <p>Con los límites establecidos en la ley, JOSE RAMON MEDINA VEGA no asume ninguna responsabilidad derivada de la falta de veracidad, integridad, actualización y precisión de los datos o informaciones que contienen sus páginas web.</p>
+                <p>Los contenidos e información no vinculan a JOSE RAMON MEDINA VEGA ni constituyen opiniones, consejos o asesoramiento legal de ningún tipo pues se trata meramente de un servicio ofrecido con carácter informativo y divulgativo.</p>
             </div>
 
             <!-- Política de Privacidad -->
@@ -153,7 +154,7 @@
                 <p>En virtud de lo establecido en el Reglamento General de Protección de Datos de Carácter Personal (RGPD), le informamos que la presente página web no recaba de forma activa ni automatizada datos personales a través de formularios (ya que no existen formularios de contacto en la plataforma).</p>
                 
                 <h3>1. Tratamiento de correos y llamadas</h3>
-                <p>Cualquier contacto realizado directamente por el usuario a través de nuestro teléfono (828 690 029) o nuestro enlace de correo electrónico, se gestionará bajo la máxima confidencialidad. Los datos que el usuario proporcione voluntariamente (ej. nombre, email o número de teléfono) al contactarnos, serán tratados por [NOMBRE DE LA EMPRESA] con la única finalidad de responder a la consulta, petición de presupuesto o prestar el servicio solicitado.</p>
+                <p>Cualquier contacto realizado directamente por el usuario a través de nuestro teléfono (828 690 029) o nuestro enlace de correo electrónico, se gestionará bajo la máxima confidencialidad. Los datos que el usuario proporcione voluntariamente (ej. nombre, email o número de teléfono) al contactarnos, serán tratados por JOSE RAMON MEDINA VEGA con la única finalidad de responder a la consulta, petición de presupuesto o prestar el servicio solicitado.</p>
 
                 <h3>2. Legitimación y Conservación</h3>
                 <p>La base legal para este tratamiento es el consentimiento implícito del usuario al iniciar la comunicación. Sus datos se conservarán exclusivamente durante el tiempo necesario para resolver su solicitud, salvo que se derive una relación comercial, en cuyo caso se conservarán durante los plazos legalmente establecidos.</p>
@@ -189,6 +190,7 @@
         <p>Utilizamos cookies propias para recordar sus preferencias (como la aceptación de este aviso) y contenido de terceros (Google Maps) que puede instalar cookies analíticas. Puede aceptarlas todas o continuar navegando.</p>
         <div class="cookie-actions">
             <a href="legal.html#cookies" class="cookie-link">Más información</a>
+            <button id="reject-cookies" class="btn-secondary" style="padding: 10px 24px; font-size: 14px;">Rechazar</button>
             <button id="accept-cookies" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">Aceptar y cerrar</button>
         </div>
     </div>
@@ -211,7 +213,7 @@
                     <li><a href="conocenos.html" class="footer-link">Sobre nosotros</a></li>
                     <li><a href="servicios.html" class="footer-link">Servicios</a></li>
                     <li><a href="index.html#procedimiento" class="footer-link">Procedimiento</a></li>
-                    <li><a href="index.html#clientes" class="footer-link">Reseñas</a></li>
+                    <li><a href="index.html#clientes" class="footer-link">Nuestros clientes</a></li>
                 </ul>
             </div>
             
@@ -230,6 +232,7 @@
                     <li><a href="legal.html#aviso-legal" class="footer-link">Aviso Legal</a></li>
                     <li><a href="legal.html#privacidad" class="footer-link">Política de Privacidad</a></li>
                     <li><a href="legal.html#cookies" class="footer-link">Política de Cookies</a></li>
+                    <li><a href="#" id="open-cookie-config" class="footer-link" onclick="event.preventDefault(); document.getElementById('cookie-banner').classList.remove('hidden'); setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 50);">Configuración de Cookies</a></li>
                 </ul>
             </div>
         </div>
@@ -237,9 +240,7 @@
         <div class="footer-bottom">
             <p class="copyright">© 2026 ASISTE CONTRAINCENDIOS. TODOS LOS DERECHOS RESERVADOS. | by <a href="https://guillediaz6.github.io/portfolio" target="_blank" style="color: inherit; text-decoration: none;">gdm.developer</a></p>
             <div class="social-links">
-                <a href="#" class="social-link"><span class="material-symbols-outlined">share</span></a>
-                <a href="#" class="social-link"><span class="material-symbols-outlined">hub</span></a>
-                <a href="#" class="social-link"><span class="material-symbols-outlined">public</span></a>
+                <a href="#" class="social-link" onclick="if(navigator.share) { navigator.share({title: document.title, url: window.location.href}); } event.preventDefault();" title="Compartir página"><span class="material-symbols-outlined">share</span></a>
             </div>
         </div>
     </div>
