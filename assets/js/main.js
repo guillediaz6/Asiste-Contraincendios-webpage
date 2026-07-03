@@ -38,81 +38,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('carousel-next');
     const dots = document.querySelectorAll('.carousel-dot');
 
-    if (!carousel) return;
+    if (carousel) {
+        const cards = carousel.querySelectorAll('.service-card');
 
-    const cards = carousel.querySelectorAll('.service-card');
+        function getCardWidth() {
+            const track = carousel.querySelector('.services-track');
+            const card = track && track.querySelector('.service-card');
+            if (!card) return 444;
+            const gap = 24;
+            return card.getBoundingClientRect().width + gap;
+        }
 
-    function getCardWidth() {
-        const track = carousel.querySelector('.services-track');
-        const card = track && track.querySelector('.service-card');
-        if (!card) return 444;
-        const gap = 24;
-        return card.getBoundingClientRect().width + gap;
-    }
+        // Arrow navigation
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+            });
+        }
 
-    // Arrow navigation
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        // Dot click — jump to card
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                carousel.scrollTo({ left: i * getCardWidth(), behavior: 'smooth' });
+            });
         });
-    }
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-        });
-    }
 
-    // Dot click — jump to card
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            carousel.scrollTo({ left: i * getCardWidth(), behavior: 'smooth' });
-        });
-    });
-
-    // Intersection Observer to highlight ALL currently visible cards
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const index = Array.from(cards).indexOf(entry.target);
-            if (index !== -1) {
-                if (entry.isIntersecting) {
-                    dots[index].classList.add('active');
-                } else {
-                    dots[index].classList.remove('active');
+        // Intersection Observer to highlight ALL currently visible cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const index = Array.from(cards).indexOf(entry.target);
+                if (index !== -1) {
+                    if (entry.isIntersecting) {
+                        dots[index].classList.add('active');
+                    } else {
+                        dots[index].classList.remove('active');
+                    }
                 }
-            }
+            });
+        }, {
+            root: carousel,
+            threshold: 0.5 // Card must be at least 50% visible to light up its dot
         });
-    }, {
-        root: carousel,
-        threshold: 0.5 // Card must be at least 50% visible to light up its dot
-    });
 
-    cards.forEach(card => observer.observe(card));
+        cards.forEach(card => observer.observe(card));
 
-    // Drag to scroll for Services
-    let isDragging = false;
-    let startX, scrollLeft;
+        // Drag to scroll for Services
+        let isDragging = false;
+        let startX, scrollLeft;
 
-    carousel.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        carousel.style.scrollBehavior = 'auto';
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    });
-    carousel.addEventListener('mouseleave', () => {
-        isDragging = false;
-        carousel.style.scrollBehavior = 'smooth';
-    });
-    carousel.addEventListener('mouseup', () => {
-        isDragging = false;
-        carousel.style.scrollBehavior = 'smooth';
-    });
-    carousel.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carousel.scrollLeft = scrollLeft - walk;
-    });
+        carousel.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            carousel.style.scrollBehavior = 'auto';
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+        carousel.addEventListener('mouseleave', () => {
+            isDragging = false;
+            carousel.style.scrollBehavior = 'smooth';
+        });
+        carousel.addEventListener('mouseup', () => {
+            isDragging = false;
+            carousel.style.scrollBehavior = 'smooth';
+        });
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+    }
 
     // --- Reviews Carousel Drag to Scroll ---
     const reviewsCarousel = document.getElementById('reviews-carousel');
@@ -216,5 +216,52 @@ document.addEventListener('DOMContentLoaded', () => {
     
     acceptMapBtns.forEach(btn => {
         btn.addEventListener('click', acceptCookies);
+    });
+
+    // --- Share Button Logic ---
+    const shareBtns = document.querySelectorAll('.social-link');
+    shareBtns.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            // Use a public URL if testing locally to prevent Windows from trying to share a local file path
+            let shareUrl = window.location.href;
+            if (shareUrl.startsWith('file://') || shareUrl.includes('localhost') || shareUrl.includes('127.0.0.1')) {
+                shareUrl = 'https://www.asistecontraincendios.com'; // Dummy domain for testing
+            }
+            
+            const shareData = {
+                title: document.title || 'ASISTE CONTRAINCENDIOS',
+                url: shareUrl
+            };
+            
+            // Web Share API requires HTTPS/localhost. On file://, it might be undefined.
+            if (navigator.share && window.isSecureContext !== false) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    console.log('Error compartiendo:', err);
+                }
+            } else {
+                // Fallback for browsers/environments that don't support Web Share API
+                try {
+                    if (navigator.clipboard && window.isSecureContext !== false) {
+                        await navigator.clipboard.writeText(shareData.url);
+                    } else {
+                        // Ultimate fallback for file:/// protocol without clipboard API access
+                        const textArea = document.createElement("textarea");
+                        textArea.value = shareData.url;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand("copy");
+                        textArea.remove();
+                    }
+                    alert('¡Enlace copiado al portapapeles!');
+                } catch (err) {
+                    console.log('Error copiando al portapapeles:', err);
+                    alert('No se pudo copiar el enlace. URL: ' + shareData.url);
+                }
+            }
+        });
     });
 });

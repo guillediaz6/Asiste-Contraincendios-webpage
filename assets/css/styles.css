@@ -646,8 +646,13 @@ img {
 .services-track {
     display: flex;
     gap: 24px;
-    padding: 0 max(24px, calc((100vw - var(--container-max)) / 2 + var(--px-desktop)));
+    padding: 0 var(--px-mobile);
     padding-bottom: 8px;
+}
+@media (min-width: 768px) {
+    .services-track {
+        padding: 0 var(--px-desktop);
+    }
 }
 .service-card {
     position: relative;
@@ -1403,10 +1408,15 @@ img {
     }
 }
 .schedule-box {
-    padding: 48px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+@media (min-width: 768px) {
+    .schedule-box {
+        padding: 48px;
+    }
 }
 .schedule-list {
     display: flex;
