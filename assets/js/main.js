@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Use a public URL if testing locally to prevent Windows from trying to share a local file path
             let shareUrl = window.location.href;
             if (shareUrl.startsWith('file://') || shareUrl.includes('localhost') || shareUrl.includes('127.0.0.1')) {
-                shareUrl = 'https://www.asistecontraincendios.com'; // Dummy domain for testing
+                shareUrl = 'https://www.asistecontraincendioslp.es'; // Dummy domain for testing
             }
             
             const shareData = {

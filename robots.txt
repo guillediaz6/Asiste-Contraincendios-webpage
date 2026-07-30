@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.asistecontraincendios.com/sitemap.xml
+Sitemap: https://www.asistecontraincendioslp.es/sitemap.xml
